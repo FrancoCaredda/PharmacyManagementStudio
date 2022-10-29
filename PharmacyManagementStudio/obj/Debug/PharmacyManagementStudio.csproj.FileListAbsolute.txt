@@ -23,3 +23,8 @@ D:\Projects\PharmacyManagementStudio\PharmacyManagementStudio\obj\Debug\Pharmacy
 D:\Projects\PharmacyManagementStudio\PharmacyManagementStudio\obj\Debug\PharmacyManagementStudio.csproj.CoreCompileInputs.cache
 D:\Projects\PharmacyManagementStudio\PharmacyManagementStudio\obj\Debug\PharmacyManagementStudio.exe
 D:\Projects\PharmacyManagementStudio\PharmacyManagementStudio\obj\Debug\PharmacyManagementStudio.pdb
+D:\Projects\PharmacyManagementStudio\PharmacyManagementStudio\bin\Debug\EntityFramework.dll
+D:\Projects\PharmacyManagementStudio\PharmacyManagementStudio\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projects\PharmacyManagementStudio\PharmacyManagementStudio\bin\Debug\EntityFramework.xml
+D:\Projects\PharmacyManagementStudio\PharmacyManagementStudio\bin\Debug\EntityFramework.SqlServer.xml
+D:\Projects\PharmacyManagementStudio\PharmacyManagementStudio\obj\Debug\PharmacyManagementStudio.csproj.CopyComplete

@@ -1,4 +1,6 @@
-﻿using PharmacyManagementStudio.Core.Model;
+﻿using PharmacyManagementStudio.Core.Command;
+using PharmacyManagementStudio.Core.Database;
+using PharmacyManagementStudio.Core.Model;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -11,6 +13,7 @@ namespace PharmacyManagementStudio.MVVM.ViewModel
 {
     public class MedicineViewModel : BaseViewModel
     {
+        private Database _database;
         private ObservableCollection<Medicine> _medicineList;
         public ObservableCollection<Medicine> MedicineList
         {
@@ -22,14 +25,26 @@ namespace PharmacyManagementStudio.MVVM.ViewModel
             }
         }
 
+
+        public Medicine Medicine { get; set; }
+        public Command AddCommand { get; set; }
+
+        public void AddElement(object o)
+        {
+            _database.AddMedicine(Medicine);
+        }
+
         public MedicineViewModel()
         {
             MedicineList = new ObservableCollection<Medicine>();
+            Medicine = new Medicine();
 
-            //Database database = new Database();
+            AddCommand = new Command(AddElement);
 
-            //var list = database.ReadMedicine();
-            //list.ToList().ForEach(m => MedicineList.Add(m));
+            _database = new Database();
+
+            var list = _database.ReadMedicine();
+            list.ToList().ForEach(m => MedicineList.Add(m));
         }
     }
 }

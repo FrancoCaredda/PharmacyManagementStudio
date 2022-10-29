@@ -16,21 +16,21 @@
         <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center">
             <StackPanel Margin="5, 0">
                 <Label Content="Name" />
-                <TextBox Width="100" Height="25" />
+                <TextBox Width="100" Height="25" Text="{Binding Medicine.Name}" />
             </StackPanel>
             <StackPanel Margin="5, 0">
                 <Label Content="Type" />
-                <TextBox Width="100" Height="25" />
+                <TextBox Width="100" Height="25" Text="{Binding Medicine.Type}"/>
             </StackPanel>
             <StackPanel Margin="5, 0">
                 <Label Content="Price" />
-                <TextBox Width="100" Height="25" />
+                <TextBox Width="100" Height="25" Text="{Binding Medicine.Price}" />
             </StackPanel>
             <StackPanel Margin="5, 0">
                 <Label Content="Count" />
-                <TextBox Width="100" Height="25" />
+                <TextBox Width="100" Height="25" Text="{Binding Medicine.StockCount}" />
             </StackPanel>
-            <Button Margin="5, 5" Content="Add" Width="70" Height="30"/>
+            <Button Margin="5, 5" Content="Add" Command="{Binding AddCommand}" Width="70" Height="30"/>
             <Button Margin="5, 5" Content="Remove" Width="70" Height="30"/>
             <Button Margin="5, 5" Content="Update" Width="70" Height="30"/>
             <Button Margin="5, 5" Content="Select row" Width="70" Height="30"/>
