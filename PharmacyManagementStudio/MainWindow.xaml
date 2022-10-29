@@ -1,0 +1,39 @@
+﻿<Window x:Class="PharmacyManagementStudio.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PharmacyManagementStudio"
+       xmlns:viewModel="clr-namespace:PharmacyManagementStudio.MVVM.ViewModel"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="490" Width="1000">
+    <Window.DataContext>
+        <viewModel:MainViewModel />
+    </Window.DataContext>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="31*" />
+            <ColumnDefinition Width="129*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30*" />
+            <RowDefinition Height="187*" />
+        </Grid.RowDefinitions>
+        <TextBlock 
+            Text="Pharmacy &#x0a;Management Studio" 
+            TextAlignment="Center" 
+            VerticalAlignment="Center"
+            FontSize="16" Height="42"/>
+        <Border Grid.RowSpan="2" BorderBrush="#000" BorderThickness="0, 0, 0.25, 0">
+            <StackPanel Orientation="Vertical" Margin="0,60,0,0">
+                <RadioButton Command="{Binding MedicineSwitch}" Content="Medicine" Style="{StaticResource PageButton}" />
+                <RadioButton Command="{Binding CustomerSwitch}" Content="Customer" Style="{StaticResource PageButton}"  />
+                <RadioButton Command="{Binding SalerSwitch}" Content="Saler" Style="{StaticResource PageButton}" />
+                <RadioButton Content="Order" Style="{StaticResource PageButton}" />
+            </StackPanel>
+        </Border>
+        <Border Grid.Column="1" Grid.Row="1" Padding="10">
+            <ContentControl  Content="{Binding ViewModel}"/>
+        </Border>
+    </Grid>
+</Window>
