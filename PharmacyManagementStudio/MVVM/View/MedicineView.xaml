@@ -31,9 +31,9 @@
                 <TextBox Width="100" Height="25" Text="{Binding Medicine.StockCount}" />
             </StackPanel>
             <Button Margin="5, 5" Content="Add" Command="{Binding AddCommand}" Width="70" Height="30"/>
-            <Button Margin="5, 5" Content="Remove" Width="70" Height="30"/>
-            <Button Margin="5, 5" Content="Update" Width="70" Height="30"/>
-            <Button Margin="5, 5" Content="Select row" Width="70" Height="30"/>
+            <Button Margin="5, 5" Content="Remove" Command="{Binding DeleteCommand}" Width="70" Height="30"/>
+            <Button Margin="5, 5" Content="Update" Command="{Binding UpdateCommand}" Width="70" Height="30"/>
+            <Button Margin="5, 5" Content="Select row" Command="{Binding SelectCommand}" Width="70" Height="30"/>
         </StackPanel>
         <DataGrid Margin="0, 5" 
                   Grid.Row="1" 
@@ -41,7 +41,8 @@
                   ItemsSource="{Binding MedicineList}"
                   AutoGenerateColumns="True"
                   HorizontalAlignment="Stretch"
-                  HeadersVisibility="Column">
+                  HeadersVisibility="Column"
+                  SelectedIndex="{Binding RowIndex}">
         </DataGrid>
     </Grid>
 </UserControl>

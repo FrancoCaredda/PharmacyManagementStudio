@@ -73,13 +73,17 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Core\Command\Command.cs" />
-    <Compile Include="Core\Database\Database.cs" />
+    <Compile Include="Core\Database\Converter\IConverter.cs" />
+    <Compile Include="Core\Database\Converter\MedicineConverter.cs" />
+    <Compile Include="Core\Database\SqlServerConnection.cs" />
+    <Compile Include="Core\Database\MedicineController.cs" />
     <Compile Include="Core\Database\Model\Customer.cs" />
     <Compile Include="Core\Database\Model\Medicine.cs" />
     <Compile Include="Core\Database\Model\Order.cs" />
     <Compile Include="Core\Database\Model\PharmacyContext.cs" />
     <Compile Include="Core\Database\Model\Saler.cs" />
     <Compile Include="Core\Database\Model\sysdiagrams.cs" />
+    <Compile Include="Core\Database\IConnection.cs" />
     <Compile Include="Core\Model\Customer.cs" />
     <Compile Include="Core\Model\Medicine.cs" />
     <Compile Include="Core\Model\Saler.cs" />

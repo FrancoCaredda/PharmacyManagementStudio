@@ -19,6 +19,7 @@ namespace PharmacyManagementStudio.Core.Database.Model
 
         [Required]
         [StringLength(50)]
+        [Index(IsUnique = true)]
         public string Name { get; set; }
 
         [StringLength(50)]
